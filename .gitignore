@@ -1,0 +1,5 @@
+node_modules
+bundle.js
+.DS_Store
+dist
+public
