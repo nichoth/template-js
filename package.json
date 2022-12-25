@@ -1,21 +1,27 @@
 {
   "type": "module",
   "scripts": {
-    "lint": "standardx -v",
-    "build": "node ./build.mjs && ssc build .",
-    "preversion": "check-deps . 2 && npm run lint",
-    "postversion": "git push && git push --tags",
     "start": "node ./build.mjs && ssc build -r -o",
-    "test": "node ./build.mjs --test && ssc build --test=test.js --headless -r -o . | tap-arc"
+    "lint": "standardx -v",
+    "build": "npm run build-js && npm run build-mjs",
+    "build-js": "esbuild src/index.mjs --bundle --format=cjs --keep-names --outfile=./dist/index.cjs",
+    "build-mjs": "esbuild src/index.mjs --bundle --format=esm --keep-names --outfile=./dist/index.mjs",
+    "preversion": "check-deps . 0 && npm run lint",
+    "postversion": "git push && git push --tags && npm publish",
+    "prepublishOnly": "npm run build",
+    "test": "node ./test/test.js | tap-arc"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
   "dependencies": {
-    "@socketsupply/ssc-node": "^1.8.2",
-    "@socketsupply/tonic": "^14.3.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.19.1",
     "@nichoth/check-max-deps": "0.0.2",
-    "@socketsupply/ssc-test": "github:socketsupply/ssc-test",
     "@socketsupply/test-dom": "0.5.0",
     "esbuild": "^0.15.11",
     "git-hooks-plus": "^1.0.1",
