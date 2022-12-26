@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "start": "node ./build.mjs && ssc build -r -o",
     "lint": "standardx -v",
     "build": "npm run build-js && npm run build-mjs",
     "build-js": "esbuild src/index.mjs --bundle --format=cjs --keep-names --outfile=./dist/index.cjs",
