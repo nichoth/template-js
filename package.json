@@ -17,8 +17,6 @@
       "require": "./dist/index.cjs"
     }
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "@babel/eslint-parser": "7.19.1",
     "@nichoth/check-max-deps": "0.0.2",
