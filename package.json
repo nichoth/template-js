@@ -26,7 +26,6 @@
     "@babel/eslint-parser": "7.19.1",
     "@nichoth/check-max-deps": "0.0.2",
     "esbuild": "^0.15.11",
-    "git-hooks-plus": "^1.0.1",
     "standardx": "^7.0.0",
     "tap-arc": "^0.3.5",
     "tapzero": "^0.6.1"

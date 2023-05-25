@@ -4,7 +4,7 @@ A template for *dependency* JS modules -- modules intended to be a dependency of
 ## use
 1. Use the *template* button in github. Or clone this then `rm -rf .git && git init`. Then `npm i && npm init`.
 
-2. Edit the source code in `src/index.mjs`.
+2. Edit the source code in `src/index.js`.
 
 ## featuring
 * compile the source to both ESM and CJS format, and put compiled files in `dist`.
@@ -13,4 +13,3 @@ A template for *dependency* JS modules -- modules intended to be a dependency of
 * use `exports` field in `package.json` to make sure the right format is used by consumers.
 * `preversion` npm hook -- use `@nichoth/check-max-deps` to validate the number of dependencies, and lint via `standardx`.
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
-* use a githook via [git-hooks-plus](https://www.npmjs.com/package/git-hooks-plus) to lint the code before pushing
