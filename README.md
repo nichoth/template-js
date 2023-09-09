@@ -1,4 +1,4 @@
-# template js
+# template js ![tests](https://github.com/nichoth/template-js/actions/workflows/nodejs.yml/badge.svg)
 A template for *dependency* JS modules -- modules intended to be a dependency of application code.
 
 ## use
