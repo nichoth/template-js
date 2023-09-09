@@ -1,3 +1,7 @@
 !dist
 .env
+node_modules
+bundle.js
+.DS_Store
+public
 
