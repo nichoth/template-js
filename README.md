@@ -3,8 +3,8 @@ A template for *dependency* JS modules -- modules intended to be a dependency of
 
 ## use
 1. Use the *template* button in github. Or clone this then `rm -rf .git && git init`. Then `npm i && npm init`.
-
-2. Edit the source code in `src/index.js`.
+2. Update the README file. Be sure to change the URL for the CI badge.
+3. Edit the source code in `src/index.js`.
 
 ## featuring
 * compile the source to both ESM and CJS format, and put compiled files in `dist`.
